@@ -36,7 +36,7 @@ const Header: FC = () => {
       <nav>
         <Link href="/favorite">Favorite</Link>
         <Link href="/auth/sign-in">Login</Link>
-        <Link href="/basket">basket</Link>
+        <Link href="/basket">Basket</Link>
         <Link href="/admin">Admin</Link>
       </nav>
     </div>
