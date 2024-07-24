@@ -4,6 +4,7 @@ import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
 interface IFormTypes {
+  id: number;
   name: string;
   price: number;
   phone: number;
@@ -16,7 +17,6 @@ const Admin = () => {
 
   const onSubmit: SubmitHandler<IFormTypes> = async (data) => {
     await postData(data);
-    reset();
   };
 
   return (
