@@ -20,6 +20,7 @@ const Header: FC = () => {
         <Link href="/favorite">Favorite</Link>
         <Link href="/auth/sign-in">Login</Link>
         <Link href="/basket">basket</Link>
+        <Link href="/admin">Admin</Link>
       </nav>
     </div>
   );
