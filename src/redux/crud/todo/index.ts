@@ -1,6 +1,6 @@
-import { api as index } from "..";
+import { apiTodo as index } from "..";
 
-const api = index.injectEndpoints({
+const apiTodo = index.injectEndpoints({
   endpoints: (build) => ({
     getTodo: build.query<TODO.GetResponse, TODO.GetRequest>({
       query: () => ({
@@ -18,4 +18,4 @@ const api = index.injectEndpoints({
   }),
 });
 
-export const { useGetTodoQuery, usePostTodoMutation } = api;
+export const { useGetTodoQuery, usePostTodoMutation } = apiTodo;

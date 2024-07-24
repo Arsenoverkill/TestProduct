@@ -5,7 +5,7 @@ import {
 } from "@reduxjs/toolkit/query/react";
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: `${process.env.NEXT_PUBLIC_API_URL}`,
+  baseUrl: `${process.env.NEXT_PUBLIC_API_URL_AUTH}`,
   prepareHeaders: (headers) => {
     let token = JSON.parse(String(localStorage.getItem("accessToken")));
     if (!token) {
@@ -28,6 +28,6 @@ export const api = createApi({
   baseQuery: baseQueryExtended,
   refetchOnReconnect: true,
   refetchOnFocus: false,
-  tagTypes: ["todo"],
+  tagTypes: ["auth"],
   endpoints: () => ({}),
 });
