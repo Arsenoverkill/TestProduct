@@ -10,7 +10,7 @@ const Header: FC = () => {
   const router = useRouter();
 
   const handleScroll = () => {
-    if (window.scrollY > 1) {
+    if (window.scrollY > 200) {
       setIsScrolled(true);
     } else {
       setIsScrolled(false);
@@ -36,7 +36,7 @@ const Header: FC = () => {
       <nav>
         <Link href="/favorite">Favorite</Link>
         <Link href="/auth/sign-in">Login</Link>
-        <Link href="/basket">basket</Link>
+        <Link href="/basket">Basket</Link>
         <Link href="/admin">Admin</Link>
       </nav>
     </div>

@@ -1,16 +1,21 @@
-.blog {
-  width: 400px;
-  height: 400px;
-  background: red;
+.blogs {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  .blogBtns {
+  flex-wrap: wrap;
+  gap: 30px;
+  .blog {
+    width: 400px;
+    height: 400px;
+    background: red;
     display: flex;
-    gap: 20px;
-    button {
-      padding: 10px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .blogBtns {
+      display: flex;
+      gap: 20px;
+      button {
+        padding: 10px;
+      }
     }
   }
 }
