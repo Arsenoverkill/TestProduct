@@ -2,14 +2,14 @@ import { api as index } from "..";
 
 const api = index.injectEndpoints({
   endpoints: (build) => ({
-    getTodo: build.query<AUTHTODO.GetResponse, AUTHTODO.GetRequest>({
+    getUser: build.query<AUTHTODO.GetResponse, AUTHTODO.GetRequest>({
       query: () => ({
         url: "/auth/user",
         method: "GET",
       }),
       providesTags: ["auth"],
     }),
-    postTodo: build.mutation<
+    postLogin: build.mutation<
       AUTHTODO.LoginPostResponse,
       AUTHTODO.LoginPostRequest
     >({
@@ -23,4 +23,4 @@ const api = index.injectEndpoints({
   }),
 });
 
-export const { useGetTodoQuery, usePostTodoMutation } = api;
+export const { useGetUserQuery, usePostLoginMutation } = api;
