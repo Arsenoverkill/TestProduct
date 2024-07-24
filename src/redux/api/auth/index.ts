@@ -2,25 +2,39 @@ import { api as index } from "..";
 
 const api = index.injectEndpoints({
   endpoints: (build) => ({
-    getUser: build.query<AUTHTODO.GetResponse, AUTHTODO.GetRequest>({
+    getMe: build.query<AUTHTODO.GetResponse, AUTHTODO.GetRequest>({
       query: () => ({
         url: "/auth/user",
         method: "GET",
       }),
       providesTags: ["auth"],
     }),
-    postLogin: build.mutation<
+    Login: build.mutation<
+
       AUTHTODO.LoginPostResponse,
       AUTHTODO.LoginPostRequest
     >({
-      query: (data) => ({
+      query: (loginData) => ({
         url: "/auth/sign-in",
         method: "POST",
-        body: data,
+        body: loginData,
       }),
       invalidatesTags: ["auth"],
+    }),
+    register: build.mutation<
+      AUTHTODO.RegisterPostResponse,
+      AUTHTODO.RegisterPostRequest
+    >({
+      query: (registerData) => ({
+        url: "/auth/sign-up",
+        method: "POST",
+        body: registerData,
+      }),
+      invalidatesTags: ["auth"],
+
     }),
   }),
 });
 
-export const { useGetUserQuery, usePostLoginMutation } = api;
+export const { useGetMeQuery,useLoginMutation ,useRegisterMutation } = api;
+

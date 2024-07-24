@@ -3,7 +3,7 @@ namespace AUTHTODO {
     profile: {
       id: string;
       username: string;
-      role: string;
+      role: string; 
       email: string;
       isActive: string;
       photo: string;
