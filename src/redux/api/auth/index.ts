@@ -10,6 +10,7 @@ const api = index.injectEndpoints({
       providesTags: ["auth"],
     }),
     Login: build.mutation<
+
       AUTHTODO.LoginPostResponse,
       AUTHTODO.LoginPostRequest
     >({
@@ -36,3 +37,4 @@ const api = index.injectEndpoints({
 });
 
 export const { useGetMeQuery,useLoginMutation ,useRegisterMutation } = api;
+

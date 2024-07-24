@@ -8,7 +8,7 @@ interface RootLayoutClientProps {
 
 const ReduxProvider: FC<RootLayoutClientProps> = ({ children }) => {
   return (
-    <>
+    <> 
       <Provider store={store}>{children}</Provider>
     </>
   );

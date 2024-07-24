@@ -1,16 +1,28 @@
-.Home {
+.Header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
-  margin: 0 auto;
   padding-block: 20px;
+  padding-inline: 40px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  background-color: #fff;
+  transition: box-shadow 0.2s ease;
+
+  &.scrolled {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
   img {
     cursor: pointer;
   }
+
   nav {
     display: flex;
     gap: 40px;
+
     a {
       font-size: 22px;
     }
