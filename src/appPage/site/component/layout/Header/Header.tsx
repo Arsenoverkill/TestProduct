@@ -10,7 +10,7 @@ const Header: FC = () => {
   const router = useRouter();
 
   const handleScroll = () => {
-    if (window.scrollY > 1) {
+    if (window.scrollY > 200) {
       setIsScrolled(true);
     } else {
       setIsScrolled(false);
