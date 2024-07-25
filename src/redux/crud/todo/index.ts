@@ -15,15 +15,27 @@ const apiTodo = index.injectEndpoints({
       }),
       invalidatesTags: ["todo"],
     }),
-    deleteTodo: build.mutation<TODO.deleteResponse , TODO.deleteRequest>({
+    deleteTodo: build.mutation<TODO.deleteResponse, TODO.deleteRequest>({
       query: (_id) => ({
         url: `/${_id}`,
         method: "DELETE",
       }),
       invalidatesTags: ["todo"],
     }),
+    editTodo: build.mutation<TODO.EditResponse, TODO.EditRequest>({
+      query: ({ _id, newData }) => ({
+        url: `${_id}`,
+        method: "PATCH",
+        body: newData,
+      }),
+      invalidatesTags: ["todo"],
+    }),
   }),
 });
 
-export const { useGetTodoQuery, usePostTodoMutation, useDeleteTodoMutation } =
-  apiTodo;
+export const {
+  useEditTodoMutation,
+  useGetTodoQuery,
+  usePostTodoMutation,
+  useDeleteTodoMutation,
+} = apiTodo;
