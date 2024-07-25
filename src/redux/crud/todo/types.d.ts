@@ -7,5 +7,10 @@ namespace TODO {
 
   type deleteResponse = Todo[];
 
-  type deleteRequest = number; 
+  type deleteRequest = number;
+  type EditResponse = Todo[];
+  type EditRequest = {
+    _id?: number;
+    newData: Todo;
+  };
 }

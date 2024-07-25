@@ -1,7 +1,7 @@
 interface Todo {
-  name: string;
-  price: number;
-  phone: number;
-  image: string;
   _id?: number;
+  name: string;
+  price: string;
+  phone: string;
+  image: string;
 }
